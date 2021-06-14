@@ -5,7 +5,6 @@ public class TestModel {
 		
 		Model m = new Model() ;
 		
-		m.creaGrafo(1950);
 		
 
 
