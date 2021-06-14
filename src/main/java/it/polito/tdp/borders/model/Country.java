@@ -110,7 +110,22 @@ public class Country {
 	public String toString() {
 		return String.format( "%s - %s", stateAbb, stateName);
 	}
+	public String stampaInfo() {
+		return String.format( "%s (popolazione: %3d)", stateAbb, popolazione);
+	}
 	
-	
-	
+	//simulazione 
+	private Integer popolazione = 0 ;
+	public Integer getPopolazione()
+	{
+		return popolazione;
+	} 
+	public void aumentaPopolazione(int qnt)
+	{
+		this.popolazione += qnt; 
+	}
+	public void diminuisciPopolazione(int qnt)
+	{
+		this.popolazione -= qnt; 
+	}
 }

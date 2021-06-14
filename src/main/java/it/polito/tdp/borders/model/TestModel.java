@@ -6,9 +6,6 @@ public class TestModel {
 		Model m = new Model() ;
 		
 		
-
-
-		
 	}
 
 }

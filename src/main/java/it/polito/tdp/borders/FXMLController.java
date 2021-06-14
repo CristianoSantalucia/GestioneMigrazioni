@@ -83,7 +83,14 @@ public class FXMLController
 
 	@FXML void doSimula(ActionEvent event)
 	{
+		Country c = this.boxNazione.getValue(); 
+		if (c == null)
+		{
+			this.txtResult.appendText("\n\nErrore, scegliere elemento dalla lista");
+			return;
+		} 
 		
+		model.simula(c);
 	}
 
 	@FXML // This method is called by the FXMLLoader when initialization is complete
