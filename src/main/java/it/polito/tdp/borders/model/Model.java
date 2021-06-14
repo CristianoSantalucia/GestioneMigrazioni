@@ -97,7 +97,7 @@ public class Model
 				Country inAnalisi = e.getcDestinazione();
 
 				// divisione al 50% tra stanziali e non
-				int nonStanziali = (int) e.getQnt() / 2;
+				int nonStanziali = (int) e.getQnt() / 4;
 
 				List<Country> vicini = new ArrayList<>(Graphs.neighborListOf(this.grafo, inAnalisi));
 				if (vicini.size() < nonStanziali)
@@ -110,9 +110,7 @@ public class Model
 					for (int c = 0; c < vicini.size(); c++)
 					{
 						Evento migrazione = new Evento(t2, inAnalisi, vicini.get(c), (int) singoloGruppo, true);
-						this.eventi.add(migrazione);
-
-						if (c == vicini.size()) System.out.println();
+						this.eventi.add(migrazione); 
 					}
 				}
 				else
